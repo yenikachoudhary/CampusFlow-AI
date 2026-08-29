@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
-    "worker": "node src/server.js"
+    "test": "node scripts/verify-system.js",
+    "telemetry:test": "node scripts/test-telemetry.js",
+    "hmac:generate": "node scripts/generate-hmac.js"
   },
   "dependencies": {
     "@notionhq/client": "^5.0.0",

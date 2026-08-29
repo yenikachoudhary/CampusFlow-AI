@@ -8,6 +8,7 @@ npm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+.firebase/
 
 # Environment variables
 .env

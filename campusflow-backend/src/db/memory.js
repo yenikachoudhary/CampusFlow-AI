@@ -91,7 +91,17 @@ class MemoryCollection {
     const _id = `${this.name}-${Date.now()}-${++this._seq}`;
     const stored = { ...document, _id };
     this.docs.push(stored);
-    return { insertedId: _id };
+    return { insertedId: _id, acknowledged: true };
+  }
+
+  async insertMany(documents) {
+    const insertedIds = {};
+    for (let i = 0; i < documents.length; i++) {
+      const _id = `${this.name}-${Date.now()}-${++this._seq}`;
+      this.docs.push({ ...documents[i], _id });
+      insertedIds[i] = _id;
+    }
+    return { insertedCount: documents.length, insertedIds, acknowledged: true };
   }
 
   async findOne(filter = {}, options = {}) {
@@ -111,11 +121,41 @@ class MemoryCollection {
       applyUpdate(doc, { $set: update.$set, $setOnInsert: update.$setOnInsert });
       if (!doc._id) doc._id = `${this.name}-${Date.now()}-${++this._seq}`;
       this.docs.push(doc);
-      return { matchedCount: 0, modifiedCount: 0, upsertedId: doc._id };
+      return { matchedCount: 0, modifiedCount: 0, upsertedId: doc._id, acknowledged: true };
     }
-    if (!doc) return { matchedCount: 0, modifiedCount: 0 };
+    if (!doc) return { matchedCount: 0, modifiedCount: 0, acknowledged: true };
     applyUpdate(doc, update);
-    return { matchedCount: 1, modifiedCount: 1 };
+    return { matchedCount: 1, modifiedCount: 1, acknowledged: true };
+  }
+
+  async updateMany(filter, update) {
+    let modifiedCount = 0;
+    for (const doc of this.docs) {
+      if (matches(doc, filter)) {
+        applyUpdate(doc, update);
+        modifiedCount++;
+      }
+    }
+    return { matchedCount: modifiedCount, modifiedCount, acknowledged: true };
+  }
+
+  async deleteOne(filter) {
+    const idx = this.docs.findIndex((item) => matches(item, filter));
+    if (idx !== -1) {
+      this.docs.splice(idx, 1);
+      return { deletedCount: 1, acknowledged: true };
+    }
+    return { deletedCount: 0, acknowledged: true };
+  }
+
+  async deleteMany(filter) {
+    const initial = this.docs.length;
+    this.docs = this.docs.filter((item) => !matches(item, filter));
+    return { deletedCount: initial - this.docs.length, acknowledged: true };
+  }
+
+  async countDocuments(filter = {}) {
+    return this.docs.filter((item) => matches(item, filter)).length;
   }
 
   async aggregate(pipeline = []) {

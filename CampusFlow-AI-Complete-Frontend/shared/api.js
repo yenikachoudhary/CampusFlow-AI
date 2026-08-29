@@ -52,6 +52,12 @@ window.CampusFlowAPI = (() => {
     workflow: () => req("/api/workflow/tasks"),
     syncWorkflow: () => req("/api/workflow/sync", { method: "POST" }),
     decideWorkflow: (id, decision) =>
-      req(`/api/workflow/tasks/${encodeURIComponent(id)}/${decision}`, { method: "POST" })
+      req(`/api/workflow/tasks/${encodeURIComponent(id)}/${decision}`, { method: "POST" }),
+    sendRiskTelemetry: (payload, signature) =>
+      req("/api/telemetry/risk", {
+        method: "POST",
+        headers: signature ? { "X-CampusFlow-Signature": signature } : {},
+        body: JSON.stringify(payload)
+      })
   };
 })();
