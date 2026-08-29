@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        CampusFlow AI — Student Portal
+    </title>
+
+    <link rel="stylesheet" href="student.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         APP SHELL
+    ====================================================== -->
+
+    <div class="student-app">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="student-sidebar" id="studentSidebar">
+
+            <!-- LOGO -->
+
+            <div class="student-logo">
+
+                <div class="student-logo-mark">
+                    CF
+                </div>
+
+                <div>
+                    <strong>
+                        CampusFlow
+                    </strong>
+
+                    <span>
+                        AI · STUDENT
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- STUDENT PROFILE -->
+
+            <div class="student-mini-profile">
+
+                <div class="student-avatar">
+                    YM
+                </div>
+
+                <div>
+
+                    <strong>
+                        Yenika Choudhary
+                    </strong>
+
+                    <span>
+                        CSE · Semester 2
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="student-navigation">
+
+
+                <button type="button" class="student-nav-item active" data-view="dashboard">
+
+                    <span class="nav-icon">
+                        ⌂
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </button>
+
+
+                <button type="button" class="student-nav-item" data-view="attendance">
+
+                    <span class="nav-icon">
+                        ◷
+                    </span>
+
+                    <span>
+                        My Attendance
+                    </span>
+
+                </button>
+
+
+                <button type="button" class="student-nav-item" data-view="academics">
+
+                    <span class="nav-icon">
+                        ▤
+                    </span>
+
+                    <span>
+                        Academics
+                    </span>
+
+                </button>
+
+
+                <button type="button" class="student-nav-item" data-view="applications">
+
+                    <span class="nav-icon">
+                        □
+                    </span>
+
+                    <span>
+                        Applications
+                    </span>
+
+                    <span class="nav-count">
+                        2
+                    </span>
+
+                </button>
+
+
+                <button type="button" class="student-nav-item" data-view="opportunities">
+
+                    <span class="nav-icon">
+                        ✦
+                    </span>
+
+                    <span>
+                        Opportunities
+                    </span>
+
+                </button>
+
+
+                <button type="button" class="student-nav-item" data-view="notices">
+
+                    <span class="nav-icon">
+                        !
+                    </span>
+
+                    <span>
+                        Notices
+                    </span>
+
+                    <span class="nav-count warning">
+                        3
+                    </span>
+
+                </button>
+
+
+                <button type="button" class="student-nav-item" data-view="assistant">
+
+                    <span class="nav-icon">
+                        AI
+                    </span>
+
+                    <span>
+                        AI Assistant
+                    </span>
+
+                </button>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="student-sidebar-bottom">
+
+                <button type="button" class="student-nav-item" data-view="profile">
+
+                    <span class="nav-icon">
+                        ◉
+                    </span>
+
+                    <span>
+                        My Profile
+                    </span>
+
+                </button>
+
+
+                <div class="student-online-status">
+
+                    <span></span>
+
+                    CAMPUSFLOW ONLINE
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN AREA
+        ================================================== -->
+
+        <main class="student-main">
+
+
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
+
+            <header class="student-topbar">
+
+                <button type="button" class="mobile-menu-button" id="mobileMenuButton" aria-label="Open navigation">
+                    ☰
+                </button>
+
+
+                <div class="student-page-title">
+
+                    <span>
+                        STUDENT PORTAL
+                    </span>
+
+                    <h1 id="pageTitle">
+                        Student Dashboard
+                    </h1>
+
+                </div>
+
+
+                <div class="student-topbar-actions">
+
+
+                    <div class="system-status">
+
+                        <span></span>
+
+                        SYSTEM ONLINE
+
+                    </div>
+
+
+                    <button type="button" class="notification-button" id="notificationButton">
+
+                        ◉
+
+                        <span class="notification-count">
+                            3
+                        </span>
+
+                    </button>
+
+
+                    <div class="topbar-avatar">
+                        YM
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 CONTENT
+            ================================================== -->
+
+            <div class="student-content">
+
+
+
+                <!-- =================================================
+                     VIEW 1 — DASHBOARD
+                ================================================== -->
+
+                <section class="student-view active" data-view="dashboard">
+
+                    <div class="dashboard-introduction">
+
+                        <div>
+
+                            <span class="date-label">
+                                WEDNESDAY · AUGUST 26, 2026
+                            </span>
+
+                            <h2>
+                                Good evening,
+                                <span data-student-name>
+                                    Yenika Choudhary
+                                </span>.
+                            </h2>
+
+                            <p>
+                                Here's your academic and campus
+                                overview for today.
+                            </p>
+
+                        </div>
+
+
+                        <div class="student-id-card">
+
+                            <span>
+                                STUDENT ID
+                            </span>
+
+                            <strong>
+                                AKGEC-CSE-2047
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- KPI CARDS -->
+
+                    <div class="student-kpi-grid">
+
+
+                        <div class="student-card kpi-card">
+
+                            <span>
+                                ATTENDANCE
+                            </span>
+
+                            <strong data-attendance>
+                                82%
+                            </strong>
+
+                            <div class="progress-bar">
+
+                                <div style="width:82%"></div>
+
+                            </div>
+
+                            <small>
+                                Above minimum requirement
+                            </small>
+
+                        </div>
+
+
+                        <div class="student-card kpi-card">
+
+                            <span>
+                                SEMESTER GPA
+                            </span>
+
+                            <strong>
+                                8.4
+                            </strong>
+
+                            <small class="positive">
+                                ↑ 0.3 this semester
+                            </small>
+
+                            <small>
+                                Good academic standing
+                            </small>
+
+                        </div>
+
+
+                        <div class="student-card kpi-card">
+
+                            <span>
+                                APPLICATIONS
+                            </span>
+
+                            <strong>
+                                2
+                            </strong>
+
+                            <small>
+                                1 awaiting approval
+                            </small>
+
+                            <small>
+                                Track your requests
+                            </small>
+
+                        </div>
+
+
+                        <div class="student-card kpi-card">
+
+                            <span>
+                                AI RISK SCORE
+                            </span>
+
+                            <strong class="risk-low">
+                                LOW
+                            </strong>
+
+                            <div class="progress-bar">
+
+                                <div style="width:25%"></div>
+
+                            </div>
+
+                            <small>
+                                No immediate intervention needed
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LOWER DASHBOARD -->
+
+                    <div class="student-dashboard-grid">
+
+
+                        <!-- CLASS SCHEDULE -->
+
+                        <div class="student-card schedule-card">
+
+                            <div class="card-heading">
+
+                                <div>
+
+                                    <span>
+                                        TODAY
+                                    </span>
+
+                                    <h3>
+                                        Class Schedule
+                                    </h3>
+
+                                </div>
+
+                                <small>
+                                    3 classes
+                                </small>
+
+                            </div>
+
+
+                            <div class="schedule-item">
+
+                                <time>
+                                    09:00
+                                </time>
+
+                                <div class="schedule-dot"></div>
+
+                                <div>
+
+                                    <strong>
+                                        Data Structures
+                                    </strong>
+
+                                    <small>
+                                        Room B-204 · Dr. Sharma
+                                    </small>
+
+                                    <em>
+                                        Completed
+                                    </em>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="schedule-item">
+
+                                <time>
+                                    11:00
+                                </time>
+
+                                <div class="schedule-dot active"></div>
+
+                                <div>
+
+                                    <strong>
+                                        Database Management
+                                    </strong>
+
+                                    <small>
+                                        Lab C-102 · Prof. Rao
+                                    </small>
+
+                                    <em class="current">
+                                        In progress
+                                    </em>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="schedule-item">
+
+                                <time>
+                                    14:00
+                                </time>
+
+                                <div class="schedule-dot"></div>
+
+                                <div>
+
+                                    <strong>
+                                        Computer Networks
+                                    </strong>
+
+                                    <small>
+                                        Room A-301 · Dr. Verma
+                                    </small>
+
+                                    <em>
+                                        Upcoming
+                                    </em>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- AI INSIGHT -->
+
+                        <div class="student-card ai-insight-card">
+
+                            <div class="card-heading">
+
+                                <div>
+
+                                    <span>
+                                        CAMPUSFLOW AI
+                                    </span>
+
+                                    <h3>
+                                        Your AI Insight
+                                    </h3>
+
+                                </div>
+
+                                <div class="ai-badge">
+                                    AI
+                                </div>
+
+                            </div>
+
+
+                            <div class="ai-insight">
+
+                                <div class="ai-icon">
+                                    ✦
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        You're on a healthy track.
+                                    </strong>
+
+                                    <p>
+                                        Your attendance is above the
+                                        required threshold and your recent
+                                        academic performance has improved.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="ai-recommendation">
+
+                                <span>
+                                    RECOMMENDATION
+                                </span>
+
+                                <p>
+                                    Focus on Database Management before
+                                    the next assessment.
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" class="primary-button" data-view-target="assistant">
+                                Ask AI Assistant →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     VIEW 2 — ATTENDANCE
+                ================================================== -->
+
+                <section class="student-view" data-view="attendance">
+
+                    <div class="section-header">
+
+                        <span>
+                            ATTENDANCE
+                        </span>
+
+                        <h2>
+                            My Attendance
+                        </h2>
+
+                        <p>
+                            Monitor your attendance and securely
+                            verify today's presence.
+                        </p>
+
+                    </div>
+
+
+                    <div class="attendance-overview">
+
+
+                        <div class="student-card attendance-main-card">
+
+                            <span>
+                                OVERALL ATTENDANCE
+                            </span>
+
+                            <strong data-attendance>
+                                82%
+                            </strong>
+
+                            <div class="large-progress">
+
+                                <div style="width:82%"></div>
+
+                            </div>
+
+                            <p>
+                                You're currently above the
+                                minimum attendance requirement.
+                            </p>
+
+                        </div>
+
+
+                        <div class="student-card">
+
+                            <span>
+                                LAST CHECK-IN
+                            </span>
+
+                            <strong data-last-checkin>
+                                Today, 09:02 AM
+                            </strong>
+
+                            <p>
+                                Facial verification completed.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="student-card attendance-subjects">
+
+                        <div class="card-heading">
+
+                            <h3>
+                                Subject-wise Attendance
+                            </h3>
+
+                        </div>
+
+
+                        <div class="subject-row">
+
+                            <span>
+                                Data Structures
+                            </span>
+
+                            <strong>
+                                91%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="subject-row">
+
+                            <span>
+                                Database Management
+                            </span>
+
+                            <strong>
+                                86%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="subject-row">
+
+                            <span>
+                                Computer Networks
+                            </span>
+
+                            <strong>
+                                79%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="subject-row">
+
+                            <span>
+                                Mathematics
+                            </span>
+
+                            <strong>
+                                74%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="button" class="primary-button" data-action="attendance-checkin">
+                        Verify Attendance →
+                    </button>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     VIEW 3 — ACADEMICS
+                ================================================== -->
+
+                <section class="student-view" data-view="academics">
+
+                    <div class="section-header">
+
+                        <span>
+                            ACADEMICS
+                        </span>
+
+                        <h2>
+                            Academic Performance
+                        </h2>
+
+                        <p>
+                            Track grades, semester performance
+                            and academic trends.
+                        </p>
+
+                    </div>
+
+
+                    <div class="student-kpi-grid">
+
+
+                        <div class="student-card kpi-card">
+
+                            <span>
+                                CURRENT GPA
+                            </span>
+
+                            <strong>
+                                8.4
+                            </strong>
+
+                            <small class="positive">
+                                ↑ 0.3 this semester
+                            </small>
+
+                        </div>
+
+
+                        <div class="student-card kpi-card">
+
+                            <span>
+                                CREDITS
+                            </span>
+
+                            <strong>
+                                22
+                            </strong>
+
+                            <small>
+                                24 attempted
+                            </small>
+
+                        </div>
+
+
+                        <div class="student-card kpi-card">
+
+                            <span>
+                                BEST SUBJECT
+                            </span>
+
+                            <strong>
+                                DSA
+                            </strong>
+
+                            <small>
+                                92 marks
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="student-card academic-table-card">
+
+                        <div class="card-heading">
+
+                            <h3>
+                                Current Semester Results
+                            </h3>
+
+                        </div>
+
+
+                        <div class="academic-row header">
+
+                            <span>
+                                SUBJECT
+                            </span>
+
+                            <span>
+                                MARKS
+                            </span>
+
+                            <span>
+                                GRADE
+                            </span>
+
+                        </div>
+
+
+                        <div class="academic-row">
+
+                            <span>
+                                Data Structures
+                            </span>
+
+                            <strong>
+                                92
+                            </strong>
+
+                            <strong class="grade">
+                                A+
+                            </strong>
+
+                        </div>
+
+
+                        <div class="academic-row">
+
+                            <span>
+                                Database Management
+                            </span>
+
+                            <strong>
+                                84
+                            </strong>
+
+                            <strong class="grade">
+                                A
+                            </strong>
+
+                        </div>
+
+
+                        <div class="academic-row">
+
+                            <span>
+                                Computer Networks
+                            </span>
+
+                            <strong>
+                                79
+                            </strong>
+
+                            <strong class="grade">
+                                B+
+                            </strong>
+
+                        </div>
+
+
+                        <div class="academic-row">
+
+                            <span>
+                                Mathematics
+                            </span>
+
+                            <strong>
+                                76
+                            </strong>
+
+                            <strong class="grade">
+                                B+
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     VIEW 4 — APPLICATIONS
+                ================================================== -->
+
+                <section class="student-view" data-view="applications">
+
+                    <div class="section-header">
+
+                        <span>
+                            WORKFLOW
+                        </span>
+
+                        <h2>
+                            My Applications
+                        </h2>
+
+                        <p>
+                            Submit requests and track their
+                            approval status.
+                        </p>
+
+                    </div>
+
+
+                    <div class="student-card">
+
+                        <div class="card-heading">
+
+                            <h3>
+                                Submit New Application
+                            </h3>
+
+                        </div>
+
+
+                        <form data-application-form class="application-form">
+
+                            <label>
+
+                                Application Type
+
+                                <select name="applicationType" required>
+
+                                    <option value="">
+                                        Select type
+                                    </option>
+
+                                    <option value="Leave Request">
+                                        Leave Request
+                                    </option>
+
+                                    <option value="Scholarship">
+                                        Scholarship
+                                    </option>
+
+                                    <option value="Academic Issue">
+                                        Academic Issue
+                                    </option>
+
+                                    <option value="Hostel">
+                                        Hostel
+                                    </option>
+
+                                </select>
+
+                            </label>
+
+
+                            <label>
+
+                                Reason
+
+                                <textarea name="reason" rows="4" placeholder="Enter your request..."
+                                    required></textarea>
+
+                            </label>
+
+
+                            <button type="submit" class="primary-button">
+                                Submit Application →
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <div class="student-card">
+
+                        <div class="card-heading">
+
+                            <h3>
+                                Application Status
+                            </h3>
+
+                        </div>
+
+
+                        <div class="application-item">
+
+                            <div>
+
+                                <strong>
+                                    Leave Request
+                                </strong>
+
+                                <small>
+                                    Submitted today
+                                </small>
+
+                            </div>
+
+                            <span class="status-badge review">
+                                Under Review
+                            </span>
+
+                        </div>
+
+
+                        <div class="application-item">
+
+                            <div>
+
+                                <strong>
+                                    Scholarship Application
+                                </strong>
+
+                                <small>
+                                    Submitted 2 days ago
+                                </small>
+
+                            </div>
+
+                            <span class="status-badge approved">
+                                Approved
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     VIEW 5 — OPPORTUNITIES
+                ================================================== -->
+
+                <section class="student-view" data-view="opportunities">
+
+                    <div class="section-header">
+
+                        <span>
+                            OPPORTUNITIES
+                        </span>
+
+                        <h2>
+                            Campus Opportunities
+                        </h2>
+
+                        <p>
+                            Discover scholarships, internships
+                            and student programs.
+                        </p>
+
+                    </div>
+
+
+                    <div class="filter-row">
+
+                        <button type="button" class="filter-chip active" data-filter="all">
+                            All
+                        </button>
+
+                        <button type="button" class="filter-chip" data-filter="scholarship">
+                            Scholarships
+                        </button>
+
+                        <button type="button" class="filter-chip" data-filter="internship">
+                            Internships
+                        </button>
+
+                        <button type="button" class="filter-chip" data-filter="program">
+                            Programs
+                        </button>
+
+                    </div>
+
+
+                    <div class="opportunity-grid">
+
+
+                        <article class="student-card opportunity-card" data-category="scholarship">
+
+                            <span>
+                                SCHOLARSHIP
+                            </span>
+
+                            <h3>
+                                National Merit Scholarship
+                            </h3>
+
+                            <p>
+                                Financial assistance for high-performing
+                                undergraduate students.
+                            </p>
+
+                            <button type="button" class="secondary-button" data-demo-action="apply">
+                                View Opportunity
+                            </button>
+
+                        </article>
+
+
+                        <article class="student-card opportunity-card" data-category="internship">
+
+                            <span>
+                                INTERNSHIP
+                            </span>
+
+                            <h3>
+                                AI Research Internship
+                            </h3>
+
+                            <p>
+                                Student internship opportunity in
+                                artificial intelligence.
+                            </p>
+
+                            <button type="button" class="secondary-button" data-demo-action="apply">
+                                View Opportunity
+                            </button>
+
+                        </article>
+
+
+                        <article class="student-card opportunity-card" data-category="program">
+
+                            <span>
+                                PROGRAM
+                            </span>
+
+                            <h3>
+                                Smart Campus Innovation Challenge
+                            </h3>
+
+                            <p>
+                                Participate in a university innovation
+                                and technology program.
+                            </p>
+
+                            <button type="button" class="secondary-button" data-demo-action="apply">
+                                View Opportunity
+                            </button>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     VIEW 6 — NOTICES
+                ================================================== -->
+
+                <section class="student-view" data-view="notices">
+
+                    <div class="section-header">
+
+                        <span>
+                            CAMPUS UPDATES
+                        </span>
+
+                        <h2>
+                            Notices
+                        </h2>
+
+                        <p>
+                            Important academic and campus
+                            announcements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="notice-list">
+
+
+                        <article class="student-card notice-card">
+
+                            <span>
+                                ACADEMIC
+                            </span>
+
+                            <h3>
+                                Mid-Semester Examination Schedule
+                            </h3>
+
+                            <p>
+                                The mid-semester examination timetable
+                                has been published.
+                            </p>
+
+                            <small>
+                                Posted today · 09:30 AM
+                            </small>
+
+                        </article>
+
+
+                        <article class="student-card notice-card">
+
+                            <span>
+                                DEPARTMENT
+                            </span>
+
+                            <h3>
+                                Database Management Lab Update
+                            </h3>
+
+                            <p>
+                                Today's practical session will take
+                                place in Lab C-102.
+                            </p>
+
+                            <small>
+                                Posted today · 08:15 AM
+                            </small>
+
+                        </article>
+
+
+                        <article class="student-card notice-card">
+
+                            <span>
+                                CAMPUS
+                            </span>
+
+                            <h3>
+                                Student Innovation Program
+                            </h3>
+
+                            <p>
+                                Applications are now open for the
+                                campus innovation program.
+                            </p>
+
+                            <small>
+                                Posted yesterday
+                            </small>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     VIEW 7 — AI ASSISTANT
+                ================================================== -->
+
+                <section class="student-view" data-view="assistant">
+
+                    <div class="section-header">
+
+                        <span>
+                            CAMPUSFLOW AI
+                        </span>
+
+                        <h2>
+                            AI Student Assistant
+                        </h2>
+
+                        <p>
+                            Ask about attendance, academics,
+                            applications or opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="student-card ai-assistant-panel">
+
+
+                        <div class="assistant-messages" id="assistantMessages">
+
+                            <div class="assistant-message assistant">
+
+                                <div class="assistant-avatar">
+                                    AI
+                                </div>
+
+                                <div class="assistant-bubble">
+
+                                    <strong>
+                                        CampusFlow AI
+                                    </strong>
+
+                                    <p>
+                                        Hi Yenika. I can help you
+                                        understand your attendance,
+                                        academics, applications and
+                                        campus opportunities.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="assistant-suggestions">
+
+                            <button type="button" class="suggestion-chip" data-question="What is my attendance?">
+                                What is my attendance?
+                            </button>
+
+                            <button type="button" class="suggestion-chip" data-question="How are my grades?">
+                                How are my grades?
+                            </button>
+
+                            <button type="button" class="suggestion-chip"
+                                data-question="What scholarships are available?">
+                                Scholarships
+                            </button>
+
+                        </div>
+
+
+                        <form data-ai-form class="assistant-form">
+
+                            <input type="text" placeholder="Ask CampusFlow AI..." autocomplete="off" required>
+
+                            <button type="submit" class="primary-button">
+                                Ask AI →
+                            </button>
+
+                        </form>
+
+
+                        <p class="demo-note">
+                            Demo mode — AI responses currently use
+                            local browser intelligence. Production
+                            deployment will connect the AI layer
+                            through the secure backend.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     VIEW 8 — PROFILE
+                ================================================== -->
+
+                <section class="student-view" data-view="profile">
+
+                    <div class="section-header">
+
+                        <span>
+                            ACCOUNT
+                        </span>
+
+                        <h2>
+                            My Profile
+                        </h2>
+
+                        <p>
+                            Your student information and account
+                            overview.
+                        </p>
+
+                    </div>
+
+
+                    <div class="profile-grid">
+
+
+                        <div class="student-card profile-card">
+
+                            <div class="profile-large-avatar">
+                                YM
+                            </div>
+
+                            <h3>
+                                Yenika Choudhary
+                            </h3>
+
+                            <p>
+                                Computer Science & Engineering
+                            </p>
+
+                            <span>
+                                Semester 2
+                            </span>
+
+                            <button type="button" class="secondary-button" data-action="edit-profile">
+                                Edit Profile
+                            </button>
+
+                        </div>
+
+
+                        <div class="student-card profile-details">
+
+                            <div class="profile-detail">
+
+                                <span>
+                                    STUDENT ID
+                                </span>
+
+                                <strong>
+                                    AKGEC-CSE-2047
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail">
+
+                                <span>
+                                    DEPARTMENT
+                                </span>
+
+                                <strong>
+                                    Computer Science & Engineering
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail">
+
+                                <span>
+                                    SEMESTER
+                                </span>
+
+                                <strong>
+                                    2nd Semester
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail">
+
+                                <span>
+                                    ACCOUNT SECURITY
+                                </span>
+
+                                <strong class="security-good">
+                                    Protected
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ATTENDANCE VERIFICATION MODAL
+    ====================================================== -->
+
+    <div class="checkin-modal hidden" id="checkinModal">
+
+        <div class="modal-content">
+
+            <button type="button" class="modal-close">
+                ×
+            </button>
+
+            <span>
+                CAMPUSFLOW AI
+            </span>
+
+            <h2>
+                Secure Attendance Verification
+            </h2>
+
+            <div class="camera-placeholder">
+
+                <div class="camera-face">
+                    ◉
+                </div>
+
+                <p class="camera-status">
+                    Initializing secure camera...
+                </p>
+
+            </div>
+
+
+            <div class="checkin-steps">
+
+                <div class="checkin-step active">
+                    Camera
+                </div>
+
+                <div class="checkin-step">
+                    Face
+                </div>
+
+                <div class="checkin-step">
+                    Liveness
+                </div>
+
+                <div class="checkin-step">
+                    Embedding
+                </div>
+
+                <div class="checkin-step">
+                    Match
+                </div>
+
+            </div>
+
+
+            <p class="demo-note">
+                Demo simulation. Facial recognition,
+                liveness detection and encrypted vector
+                matching are planned production components.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div class="student-toast" id="studentToast">
+
+        <strong data-toast-title>
+            CampusFlow AI
+        </strong>
+
+        <span data-toast-message>
+            Action completed.
+        </span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+    <script src="../shared/api.js"></script>
+    <script type="module">
+
+        import { initializeApp }
+            from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+        import {
+            getAuth,
+            onAuthStateChanged,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+        import {
+            getFirestore,
+            doc,
+            getDoc
+        } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyD3pNldStcJ2LmpfF0yPmeGAuMVMPuojQk",
+            authDomain: "campusflow-ai-96b09.firebaseapp.com",
+            projectId: "campusflow-ai-96b09",
+            storageBucket: "campusflow-ai-96b09.firebasestorage.app",
+            messagingSenderId: "253168582449",
+            appId: "1:253168582449:web:6981a06c9f106f485a3a10"
+        };
+
+
+        const app = initializeApp(firebaseConfig);
+
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+
+        // Protect student page
+        onAuthStateChanged(auth, async (user) => {
+
+            if (!user) {
+                window.location.href = "../login.html";
+                return;
+            }
+
+            try {
+
+                const userDoc = await getDoc(
+                    doc(db, "users", user.uid)
+                );
+
+                if (!userDoc.exists()) {
+                    await signOut(auth);
+                    window.location.href = "../login.html";
+                    return;
+                }
+
+                const userData = userDoc.data();
+
+                // Prevent staff from entering student portal
+                if (userData.role !== "student") {
+                    window.location.href = "../staff/staff.html";
+                    return;
+                }
+
+                console.log("Logged in student:", userData);
+
+                // Display user information if these elements exist
+                const nameElement =
+                    document.getElementById("studentName");
+
+                if (nameElement) {
+                    nameElement.textContent = userData.name;
+                }
+
+            } catch (error) {
+
+                console.error(error);
+
+            }
+
+        });
+
+
+        // Logout function
+        window.logout = async function () {
+
+            try {
+
+                await signOut(auth);
+
+                window.location.href = "../login.html";
+
+            } catch (error) {
+
+                console.error(error);
+
+            }
+
+        };
+
+    </script>
+
+    <script src="student.js"></script>
+</body>
+
+</html>

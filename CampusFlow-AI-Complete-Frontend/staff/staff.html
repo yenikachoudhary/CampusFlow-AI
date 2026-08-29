@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="CampusFlow AI Faculty and Staff Portal">
+
+    <title>CampusFlow AI — Faculty Portal</title>
+
+    <!-- Main Staff CSS -->
+    <link rel="stylesheet" href="staff.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         MOBILE SIDEBAR BACKDROP
+         ===================================================== -->
+
+    <div class="sidebar-backdrop"></div>
+
+
+    <!-- =====================================================
+         STAFF SIDEBAR
+         ===================================================== -->
+
+    <aside class="staff-sidebar">
+
+        <!-- Brand -->
+        <div class="staff-brand">
+
+            <div class="brand-logo">
+                CF
+            </div>
+
+            <div>
+                <h2>CampusFlow</h2>
+                <span>AI Faculty Portal</span>
+            </div>
+
+        </div>
+
+
+        <!-- Faculty Profile -->
+        <div class="sidebar-profile">
+
+            <div class="profile-avatar">
+                DR
+            </div>
+
+            <div>
+                <strong class="staff-name">Dr. Rahul Sharma</strong>
+                <span>Faculty • CSE</span>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="staff-navigation">
+
+            <p class="nav-section-title">
+                OVERVIEW
+            </p>
+
+            <button class="staff-nav-item active" data-view="dashboard">
+
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+
+            </button>
+
+
+            <p class="nav-section-title">
+                ACADEMICS
+            </p>
+
+            <button class="staff-nav-item" data-view="attendance">
+
+                <span class="nav-icon">◉</span>
+                <span>AI Attendance</span>
+
+            </button>
+
+
+            <button class="staff-nav-item" data-view="students">
+
+                <span class="nav-icon">♙</span>
+                <span>Students</span>
+
+            </button>
+
+
+            <button class="staff-nav-item" data-view="risk">
+
+                <span class="nav-icon">△</span>
+                <span>Risk Radar</span>
+
+            </button>
+
+
+            <p class="nav-section-title">
+                WORKFLOW
+            </p>
+
+
+            <button class="staff-nav-item" data-view="applications">
+
+                <span class="nav-icon">▣</span>
+                <span>Applications</span>
+
+                <span class="nav-count">4</span>
+
+            </button>
+
+
+            <button class="staff-nav-item" data-view="notices">
+
+                <span class="nav-icon">✦</span>
+                <span>Smart Notices</span>
+
+            </button>
+
+
+            <button class="staff-nav-item" data-view="queue">
+
+                <span class="nav-icon">✓</span>
+                <span>Action Queue</span>
+
+                <span class="nav-count warning-count">3</span>
+
+            </button>
+
+
+            <p class="nav-section-title">
+                SYSTEM
+            </p>
+
+
+            <button class="staff-nav-item" data-view="assistant">
+
+                <span class="nav-icon">✧</span>
+                <span>AI Assistant</span>
+
+            </button>
+
+
+            <button class="staff-nav-item" data-view="security">
+
+                <span class="nav-icon">◇</span>
+                <span>Security & Audit</span>
+
+            </button>
+
+
+            <button class="staff-nav-item" data-view="profile">
+
+                <span class="nav-icon">○</span>
+                <span>My Profile</span>
+
+            </button>
+
+        </nav>
+
+
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>System Online</strong>
+                    <small>All services operational</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN APPLICATION
+         ===================================================== -->
+
+    <main class="staff-main">
+
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
+
+        <header class="staff-topbar">
+
+            <button class="mobile-menu-button" aria-label="Open menu">
+
+                ☰
+
+            </button>
+
+
+            <div class="staff-page-title">
+
+                <span>FACULTY WORKSPACE</span>
+
+                <h1>Faculty Dashboard</h1>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="notification-button" aria-label="Notifications">
+
+                    ♢
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="topbar-user">
+
+                    <div class="topbar-avatar">
+                        DR
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Dr. Rahul Sharma
+                        </strong>
+
+                        <span>
+                            Faculty
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <div class="staff-content">
+
+
+            <!-- =================================================
+                 DASHBOARD
+                 ================================================= -->
+
+            <section class="staff-view active" id="dashboard">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            TODAY'S OVERVIEW
+                        </span>
+
+                        <h2>
+                            Good morning, Dr. Sharma.
+                        </h2>
+
+                        <p>
+                            Here's what requires your attention today.
+                        </p>
+
+                    </div>
+
+                    <div class="date-display">
+                        Monday, 24 August 2026
+                    </div>
+
+                </div>
+
+
+                <!-- KPI CARDS -->
+
+                <div class="staff-kpi-grid">
+
+                    <div class="staff-kpi-card">
+
+                        <div class="kpi-icon">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Today's Attendance
+                            </span>
+
+                            <strong>
+                                94.8%
+                            </strong>
+
+                            <small class="positive">
+                                ↑ 2.4% vs yesterday
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="staff-kpi-card">
+
+                        <div class="kpi-icon">
+                            ♙
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Students Present
+                            </span>
+
+                            <strong>
+                                182
+                            </strong>
+
+                            <small>
+                                of 192 students
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="staff-kpi-card risk-kpi">
+
+                        <div class="kpi-icon">
+                            △
+                        </div>
+
+                        <div>
+
+                            <span>
+                                At-Risk Students
+                            </span>
+
+                            <strong>
+                                12
+                            </strong>
+
+                            <small class="negative">
+                                Requires attention
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="staff-kpi-card">
+
+                        <div class="kpi-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Pending Actions
+                            </span>
+
+                            <strong>
+                                7
+                            </strong>
+
+                            <small>
+                                3 AI recommendations
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DASHBOARD LOWER GRID -->
+
+                <div class="dashboard-grid">
+
+
+                    <!-- Attendance Snapshot -->
+
+                    <div class="staff-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    LIVE MONITOR
+                                </span>
+
+                                <h3>
+                                    Attendance Snapshot
+                                </h3>
+
+                            </div>
+
+                            <button class="panel-link quick-action" data-target="attendance">
+
+                                Open Scanner →
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="attendance-summary">
+
+                            <div class="attendance-circle">
+
+                                <strong>94.8%</strong>
+
+                                <span>
+                                    Present
+                                </span>
+
+                            </div>
+
+
+                            <div class="attendance-stats">
+
+                                <div>
+                                    <span>Present</span>
+                                    <strong>182</strong>
+                                </div>
+
+                                <div>
+                                    <span>Absent</span>
+                                    <strong>10</strong>
+                                </div>
+
+                                <div>
+                                    <span>Late</span>
+                                    <strong>6</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mini-progress">
+
+                            <div style="width:94.8%"></div>
+
+                        </div>
+
+
+                        <p class="panel-note">
+                            AI verification active for
+                            <strong>3rd Year CSE</strong>.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Action Queue -->
+
+                    <div class="staff-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    HUMAN APPROVAL
+                                </span>
+
+                                <h3>
+                                    Action Queue
+                                </h3>
+
+                            </div>
+
+                            <button class="panel-link quick-action" data-target="queue">
+
+                                View All →
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="queue-preview">
+
+                            <div class="queue-item">
+
+                                <span class="queue-dot orange"></span>
+
+                                <div>
+                                    <strong>
+                                        Leave Request
+                                    </strong>
+
+                                    <small>
+                                        Student #CS21047
+                                    </small>
+                                </div>
+
+                                <span class="queue-status">
+                                    REVIEW
+                                </span>
+
+                            </div>
+
+
+                            <div class="queue-item">
+
+                                <span class="queue-dot blue"></span>
+
+                                <div>
+                                    <strong>
+                                        Attendance Alert
+                                    </strong>
+
+                                    <small>
+                                        5 students detected
+                                    </small>
+                                </div>
+
+                                <span class="queue-status">
+                                    AI
+                                </span>
+
+                            </div>
+
+
+                            <div class="queue-item">
+
+                                <span class="queue-dot purple"></span>
+
+                                <div>
+                                    <strong>
+                                        Notice Draft
+                                    </strong>
+
+                                    <small>
+                                        Generated by AI
+                                    </small>
+                                </div>
+
+                                <span class="queue-status">
+                                    REVIEW
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="staff-panel quick-actions-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                SHORTCUTS
+                            </span>
+
+                            <h3>
+                                Quick Actions
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions-grid">
+
+                        <button class="quick-action" data-target="attendance">
+
+                            <span>◉</span>
+
+                            <strong>
+                                Start Attendance
+                            </strong>
+
+                            <small>
+                                AI facial verification
+                            </small>
+
+                        </button>
+
+
+                        <button class="quick-action" data-target="risk">
+
+                            <span>△</span>
+
+                            <strong>
+                                View Risk Radar
+                            </strong>
+
+                            <small>
+                                Find struggling students
+                            </small>
+
+                        </button>
+
+
+                        <button class="quick-action" data-target="applications">
+
+                            <span>▣</span>
+
+                            <strong>
+                                Review Applications
+                            </strong>
+
+                            <small>
+                                4 pending requests
+                            </small>
+
+                        </button>
+
+
+                        <button class="quick-action" data-target="assistant">
+
+                            <span>✧</span>
+
+                            <strong>
+                                Ask CampusFlow AI
+                            </strong>
+
+                            <small>
+                                Intelligent assistance
+                            </small>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 AI ATTENDANCE
+                 ================================================= -->
+
+            <section class="staff-view" id="attendance">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            BIOMETRIC VERIFICATION
+                        </span>
+
+                        <h2>
+                            AI Attendance
+                        </h2>
+
+                        <p>
+                            Verify student identity using AI
+                            facial recognition and liveness detection.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="attendance-page-grid">
+
+
+                    <!-- Camera -->
+
+                    <div class="camera-panel">
+
+                        <div class="camera-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    LIVE CAMERA
+                                </span>
+
+                                <h3>
+                                    AI Verification Scanner
+                                </h3>
+
+                            </div>
+
+                            <span id="cameraStatus" class="camera-status">
+
+                                CAMERA READY
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="camera-window">
+
+                            <div class="camera-placeholder">
+
+                                <div class="camera-symbol">
+                                    ◉
+                                </div>
+
+                                <strong>
+                                    Camera Preview
+                                </strong>
+
+                                <span>
+                                    Camera simulation for demo
+                                </span>
+
+                            </div>
+
+
+                            <div class="scan-overlay">
+
+                                <div class="scan-corners"></div>
+
+                                <div class="scan-line"></div>
+
+                            </div>
+
+
+                            <div class="camera-corner top-left"></div>
+                            <div class="camera-corner top-right"></div>
+                            <div class="camera-corner bottom-left"></div>
+                            <div class="camera-corner bottom-right"></div>
+
+                        </div>
+
+
+                        <div class="scanner-controls">
+
+                            <button id="startAttendance" class="primary-button">
+
+                                Start AI Scanner
+
+                            </button>
+
+
+                            <button id="stopAttendance" class="secondary-button" disabled>
+
+                                Stop Scanner
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="scan-status-row">
+
+                            <span>
+                                STATUS
+                            </span>
+
+                            <strong id="scanStatus">
+                                STANDBY
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Verification Information -->
+
+                    <div class="staff-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    AI PIPELINE
+                                </span>
+
+                                <h3>
+                                    Verification Process
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="verification-steps">
+
+                            <div class="verification-step completed">
+
+                                <span>01</span>
+
+                                <div>
+                                    <strong>
+                                        Face Detection
+                                    </strong>
+
+                                    <small>
+                                        Locate face in camera frame
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="verification-step completed">
+
+                                <span>02</span>
+
+                                <div>
+                                    <strong>
+                                        Embedding Extraction
+                                    </strong>
+
+                                    <small>
+                                        Convert face into numeric vector
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="verification-step">
+
+                                <span>03</span>
+
+                                <div>
+                                    <strong>
+                                        Liveness Check
+                                    </strong>
+
+                                    <small>
+                                        Detect movement and anti-spoofing signals
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="verification-step">
+
+                                <span>04</span>
+
+                                <div>
+                                    <strong>
+                                        Vector Matching
+                                    </strong>
+
+                                    <small>
+                                        Compare against encrypted student vectors
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="privacy-box">
+
+                            <span>🔒</span>
+
+                            <div>
+
+                                <strong>
+                                    Privacy Preserved
+                                </strong>
+
+                                <p>
+                                    Raw camera frames are not stored.
+                                    The production system stores only
+                                    encrypted biometric embeddings.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 STUDENTS
+                 ================================================= -->
+
+            <section class="staff-view" id="students">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            STUDENT MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Student Directory
+                        </h2>
+
+                        <p>
+                            Monitor your assigned students.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="staff-panel">
+
+                    <div class="table-toolbar">
+
+                        <input type="search" placeholder="Search student...">
+
+                        <select>
+
+                            <option>
+                                All Students
+                            </option>
+
+                            <option>
+                                Present
+                            </option>
+
+                            <option>
+                                At Risk
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="student-table-wrapper">
+
+                        <table class="student-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Student</th>
+                                    <th>Roll Number</th>
+                                    <th>Attendance</th>
+                                    <th>Academic Score</th>
+                                    <th>Risk</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Aarav Singh
+                                    </td>
+
+                                    <td>
+                                        CS21001
+                                    </td>
+
+                                    <td>
+                                        96%
+                                    </td>
+
+                                    <td>
+                                        87%
+                                    </td>
+
+                                    <td>
+                                        <span class="risk-badge low">
+                                            LOW
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Ananya Gupta
+                                    </td>
+
+                                    <td>
+                                        CS21012
+                                    </td>
+
+                                    <td>
+                                        91%
+                                    </td>
+
+                                    <td>
+                                        78%
+                                    </td>
+
+                                    <td>
+                                        <span class="risk-badge low">
+                                            LOW
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Rohan Verma
+                                    </td>
+
+                                    <td>
+                                        CS21031
+                                    </td>
+
+                                    <td>
+                                        72%
+                                    </td>
+
+                                    <td>
+                                        58%
+                                    </td>
+
+                                    <td>
+                                        <span class="risk-badge medium">
+                                            MEDIUM
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Priya Sharma
+                                    </td>
+
+                                    <td>
+                                        CS21047
+                                    </td>
+
+                                    <td>
+                                        61%
+                                    </td>
+
+                                    <td>
+                                        49%
+                                    </td>
+
+                                    <td>
+                                        <span class="risk-badge high">
+                                            HIGH
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RISK RADAR
+                 ================================================= -->
+
+            <section class="staff-view" id="risk">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            AI ANALYTICS
+                        </span>
+
+                        <h2>
+                            Performance Risk Radar
+                        </h2>
+
+                        <p>
+                            AI-generated academic intervention signals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="risk-dashboard">
+
+                    <div class="risk-score-card">
+
+                        <span>
+                            CLASS RISK SCORE
+                        </span>
+
+                        <strong>
+                            18.4
+                        </strong>
+
+                        <small>
+                            / 100 — Low Risk
+                        </small>
+
+                    </div>
+
+
+                    <div class="staff-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    AI DETECTION
+                                </span>
+
+                                <h3>
+                                    Students Requiring Attention
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="risk-list">
+
+                            <div class="risk-student">
+
+                                <div>
+                                    <strong>
+                                        Priya Sharma
+                                    </strong>
+
+                                    <span>
+                                        Attendance + marks decline
+                                    </span>
+                                </div>
+
+                                <strong class="risk-number">
+                                    82
+                                </strong>
+
+                                <span class="risk-badge high">
+                                    HIGH
+                                </span>
+
+                            </div>
+
+
+                            <div class="risk-student">
+
+                                <div>
+                                    <strong>
+                                        Rohan Verma
+                                    </strong>
+
+                                    <span>
+                                        Attendance below threshold
+                                    </span>
+                                </div>
+
+                                <strong class="risk-number">
+                                    64
+                                </strong>
+
+                                <span class="risk-badge medium">
+                                    MEDIUM
+                                </span>
+
+                            </div>
+
+
+                            <div class="risk-student">
+
+                                <div>
+                                    <strong>
+                                        Karan Mehta
+                                    </strong>
+
+                                    <span>
+                                        Recent academic decline
+                                    </span>
+                                </div>
+
+                                <strong class="risk-number">
+                                    57
+                                </strong>
+
+                                <span class="risk-badge medium">
+                                    MEDIUM
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 APPLICATIONS
+                 ================================================= -->
+
+            <section class="staff-view" id="applications">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            WORKFLOW MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Application Tracking
+                        </h2>
+
+                        <p>
+                            Review and process student applications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="applications-list">
+
+
+                    <article class="application-card">
+
+                        <div class="application-main">
+
+                            <span class="application-type">
+                                LEAVE REQUEST
+                            </span>
+
+                            <h3>
+                                Medical Leave — Priya Sharma
+                            </h3>
+
+                            <p>
+                                Request for 3 days leave due to
+                                medical reasons.
+                            </p>
+
+                            <small>
+                                Submitted 24 minutes ago
+                            </small>
+
+                        </div>
+
+
+                        <span class="status-badge pending">
+                            PENDING
+                        </span>
+
+
+                        <div class="application-actions">
+
+                            <button class="approve-button">
+                                Approve
+                            </button>
+
+                            <button class="reject-button">
+                                Reject
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="application-card">
+
+                        <div class="application-main">
+
+                            <span class="application-type">
+                                CERTIFICATE
+                            </span>
+
+                            <h3>
+                                Bonafide Certificate — Aarav Singh
+                            </h3>
+
+                            <p>
+                                Student requested a bonafide certificate.
+                            </p>
+
+                            <small>
+                                Submitted 1 hour ago
+                            </small>
+
+                        </div>
+
+
+                        <span class="status-badge pending">
+                            PENDING
+                        </span>
+
+
+                        <div class="application-actions">
+
+                            <button class="approve-button">
+                                Approve
+                            </button>
+
+                            <button class="reject-button">
+                                Reject
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SMART NOTICES
+                 ================================================= -->
+
+            <section class="staff-view" id="notices">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            GENERATIVE AI
+                        </span>
+
+                        <h2>
+                            Smart Notice Engine
+                        </h2>
+
+                        <p>
+                            Generate structured campus notices with AI.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="notice-generator">
+
+                    <div class="staff-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    INPUT
+                                </span>
+
+                                <h3>
+                                    Notice Information
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <textarea id="noticeInput"
+                            placeholder="Example: Tomorrow's DBMS class will be shifted to Lab 3 at 11 AM..."></textarea>
+
+
+                        <button id="generateNotice" class="primary-button">
+
+                            Generate AI Notice
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="staff-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    AI OUTPUT
+                                </span>
+
+                                <h3>
+                                    Draft Preview
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <pre id="noticeOutput" class="notice-output">Your AI-generated notice will appear here.</pre>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACTION QUEUE
+                 ================================================= -->
+
+            <section class="staff-view" id="queue">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            HUMAN-IN-THE-LOOP
+                        </span>
+
+                        <h2>
+                            Notion Action Queue
+                        </h2>
+
+                        <p>
+                            AI recommendations awaiting human approval.
+                        </p>
+
+                    </div>
+
+                    <div class="notion-indicator">
+                        NOTION SYNCED
+                    </div>
+
+                </div>
+
+
+                <div class="action-queue-list">
+
+
+                    <article class="action-card">
+
+                        <div class="action-card-icon">
+                            AI
+                        </div>
+
+                        <div class="action-card-content">
+
+                            <span class="action-card-type">
+                                AI RECOMMENDATION
+                            </span>
+
+                            <h3>
+                                Attendance Intervention
+                            </h3>
+
+                            <p>
+                                5 students have fallen below the
+                                attendance threshold. Recommend
+                                faculty counselling.
+                            </p>
+
+                            <small>
+                                Generated 8 minutes ago
+                            </small>
+
+                        </div>
+
+
+                        <span class="action-card-label">
+                            PENDING
+                        </span>
+
+
+                        <div class="action-card-buttons">
+
+                            <button class="approve-button">
+                                Approve
+                            </button>
+
+                            <button class="reject-button">
+                                Reject
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="action-card">
+
+                        <div class="action-card-icon">
+                            AI
+                        </div>
+
+                        <div class="action-card-content">
+
+                            <span class="action-card-type">
+                                NOTICE
+                            </span>
+
+                            <h3>
+                                Low Attendance Warning
+                            </h3>
+
+                            <p>
+                                AI drafted a warning notice for
+                                students below the 75% threshold.
+                            </p>
+
+                            <small>
+                                Generated 21 minutes ago
+                            </small>
+
+                        </div>
+
+
+                        <span class="action-card-label">
+                            PENDING
+                        </span>
+
+
+                        <div class="action-card-buttons">
+
+                            <button class="approve-button">
+                                Approve
+                            </button>
+
+                            <button class="reject-button">
+                                Reject
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 AI ASSISTANT
+                 ================================================= -->
+
+            <section class="staff-view" id="assistant">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            INTELLIGENT ASSISTANT
+                        </span>
+
+                        <h2>
+                            CampusFlow AI Assistant
+                        </h2>
+
+                        <p>
+                            Ask questions about your students and workflows.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="assistant-container">
+
+
+                    <div class="assistant-messages">
+
+                        <div class="assistant-message">
+
+                            <div class="assistant-avatar">
+                                AI
+                            </div>
+
+                            <div class="assistant-bubble">
+
+                                <strong>
+                                    CampusFlow AI
+                                </strong>
+
+                                <p>
+                                    Hello Dr. Sharma. I can help you
+                                    analyze attendance, academic risk,
+                                    applications, notices and workflow
+                                    activity.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="suggestion-row">
+
+                        <button class="suggestion-chip">
+                            Show students at risk
+                        </button>
+
+                        <button class="suggestion-chip">
+                            Analyze attendance
+                        </button>
+
+                        <button class="suggestion-chip">
+                            Pending applications
+                        </button>
+
+                        <button class="suggestion-chip">
+                            Security status
+                        </button>
+
+                    </div>
+
+
+                    <form class="assistant-form">
+
+                        <input type="text" placeholder="Ask CampusFlow AI something...">
+
+                        <button type="submit" class="primary-button">
+
+                            Send
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SECURITY
+                 ================================================= -->
+
+            <section class="staff-view" id="security">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            SECURITY CENTER
+                        </span>
+
+                        <h2>
+                            Security & Audit
+                        </h2>
+
+                        <p>
+                            Monitor platform security and system activity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="security-grid">
+
+
+                    <div class="security-card">
+
+                        <span class="security-card-icon">
+                            🔐
+                        </span>
+
+                        <strong>
+                            Encryption
+                        </strong>
+
+                        <span class="security-good">
+                            AES-256
+                        </span>
+
+                        <small>
+                            Protected
+                        </small>
+
+                    </div>
+
+
+                    <div class="security-card">
+
+                        <span class="security-card-icon">
+                            ◇
+                        </span>
+
+                        <strong>
+                            Payload Signing
+                        </strong>
+
+                        <span class="security-good">
+                            HMAC-SHA256
+                        </span>
+
+                        <small>
+                            Active
+                        </small>
+
+                    </div>
+
+
+                    <div class="security-card">
+
+                        <span class="security-card-icon">
+                            ⛨
+                        </span>
+
+                        <strong>
+                            Rate Limiter
+                        </strong>
+
+                        <span class="security-good">
+                            ACTIVE
+                        </span>
+
+                        <small>
+                            Protected
+                        </small>
+
+                    </div>
+
+
+                    <div class="security-card">
+
+                        <span class="security-card-icon">
+                            ◉
+                        </span>
+
+                        <strong>
+                            RBAC
+                        </strong>
+
+                        <span class="security-good">
+                            ENFORCED
+                        </span>
+
+                        <small>
+                            Faculty role
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="staff-panel security-log-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                AUDIT TRAIL
+                            </span>
+
+                            <h3>
+                                System Activity
+                            </h3>
+
+                        </div>
+
+
+                        <div class="security-actions">
+
+                            <button data-security-action="audit" class="secondary-button">
+
+                                Run Security Audit
+
+                            </button>
+
+
+                            <button data-security-action="rotate" class="secondary-button">
+
+                                Rotate Token
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="log-console">
+
+                        <div class="log-line">
+                            [SYSTEM] CampusFlow security monitor ready.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFILE
+                 ================================================= -->
+
+            <section class="staff-view" id="profile">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            ACCOUNT
+                        </span>
+
+                        <h2>
+                            Faculty Profile
+                        </h2>
+
+                        <p>
+                            Your CampusFlow account information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="staff-panel profile-panel">
+
+                    <div class="large-profile-avatar">
+                        DR
+                    </div>
+
+                    <div>
+
+                        <span class="panel-label">
+                            FACULTY ACCOUNT
+                        </span>
+
+                        <h3>
+                            Dr. Rahul Sharma
+                        </h3>
+
+                        <p>
+                            Department of Computer Science &
+                            Engineering
+                        </p>
+
+                        <span class="role-pill">
+                            FACULTY
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         TOAST NOTIFICATION
+         ===================================================== -->
+
+    <div class="staff-toast">
+
+        <div class="toast-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <strong>
+                CampusFlow
+            </strong>
+
+            <span>
+                Action completed.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+    <script src="../shared/api.js"></script>
+
+    <script type="module">
+
+        import { initializeApp }
+            from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+        import {
+            getAuth,
+            onAuthStateChanged,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+        import {
+            getFirestore,
+            doc,
+            getDoc
+        } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+
+        /* =====================================================
+           FIREBASE CONFIG
+           ===================================================== */
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyD3pNldStcJ2LmpfF0yPmeGAuMVMPuojQk",
+            authDomain: "campusflow-ai-96b09.firebaseapp.com",
+            projectId: "campusflow-ai-96b09",
+            storageBucket: "campusflow-ai-96b09.firebasestorage.app",
+            messagingSenderId: "253168582449",
+            appId: "1:253168582449:web:6981a06c9f106f485a3a10"
+        };
+
+
+        /* =====================================================
+           INITIALIZE FIREBASE
+           ===================================================== */
+
+        const app = initializeApp(firebaseConfig);
+
+        const auth = getAuth(app);
+
+        const db = getFirestore(app);
+
+
+        /* =====================================================
+           STAFF AUTHENTICATION
+           ===================================================== */
+
+        onAuthStateChanged(auth, async (user) => {
+
+            console.log("Firebase user:", user);
+
+
+            // No user logged in
+            if (!user) {
+
+                console.log("No authenticated user.");
+
+                window.location.href = "../login.html";
+
+                return;
+            }
+
+
+            try {
+
+                /* Get user profile from Firestore */
+
+                const userRef = doc(
+                    db,
+                    "users",
+                    user.uid
+                );
+
+                const userSnapshot = await getDoc(userRef);
+
+
+                console.log(
+                    "Firestore user document:",
+                    userSnapshot.exists()
+                );
+
+
+                // User document doesn't exist
+                if (!userSnapshot.exists()) {
+
+                    console.error(
+                        "User document does not exist:",
+                        user.uid
+                    );
+
+                    await signOut(auth);
+
+                    window.location.href = "../login.html";
+
+                    return;
+                }
+
+
+                const userData = userSnapshot.data();
+
+
+                console.log(
+                    "Logged-in user data:",
+                    userData
+                );
+
+
+                console.log(
+                    "User role:",
+                    userData.role
+                );
+
+
+                /* =================================================
+                   STAFF ROLE CHECK
+    
+                   Accept both:
+                   staff
+                   faculty
+                   ================================================= */
+
+                if (
+                    userData.role !== "staff" &&
+                    userData.role !== "faculty"
+                ) {
+
+                    console.error(
+                        "Access denied. User role is:",
+                        userData.role
+                    );
+
+                    window.location.href =
+                        "../student/student.html";
+
+                    return;
+                }
+
+
+                /* =================================================
+                   STAFF LOGIN SUCCESS
+                   ================================================= */
+
+                console.log(
+                    "CampusFlow staff authentication successful."
+                );
+
+
+                /* Update staff names */
+
+                const staffNames =
+                    document.querySelectorAll(".staff-name");
+
+
+                staffNames.forEach((element) => {
+
+                    element.textContent =
+                        userData.name || user.email;
+
+                });
+
+
+            } catch (error) {
+
+                console.error(
+                    "Firebase staff authentication error:",
+                    error
+                );
+
+            }
+
+        });
+
+
+        /* =====================================================
+           LOGOUT
+           ===================================================== */
+
+        window.logout = async function () {
+
+            try {
+
+                await signOut(auth);
+
+                window.location.href =
+                    "../login.html";
+
+            } catch (error) {
+
+                console.error(
+                    "Logout error:",
+                    error
+                );
+
+            }
+
+        };
+
+    </script>
+
+
+
+    <script src="staff.js"></script>
+
+</body>
+
+</html>

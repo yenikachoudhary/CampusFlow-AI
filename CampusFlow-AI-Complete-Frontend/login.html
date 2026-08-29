@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CampusFlow AI - Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #071817;
+            color: #edf8f5;
+            font-family: "Segoe UI", Arial, sans-serif;
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            width: min(430px, 92%);
+        }
+
+        .logo {
+            margin: 0 auto 15px;
+            width: 65px;
+            height: 65px;
+            border-radius: 18px;
+            background: #27d3b2;
+            color: #03110e;
+            display: grid;
+            place-items: center;
+            font-weight: 900;
+            font-size: 23px;
+        }
+
+        .brand {
+            text-align: center;
+            color: #27d3b2;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .box {
+            margin-top: 25px;
+            background: #0d2623;
+            border: 1px solid #23423e;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #9db5b0;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 7px;
+            font-size: 14px;
+            color: #cce5df;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 13px;
+            border-radius: 10px;
+            border: 1px solid #31504b;
+            background: #071817;
+            color: white;
+            outline: none;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #27d3b2;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 14px;
+            border: 0;
+            border-radius: 10px;
+            background: #27d3b2;
+            color: #03110e;
+            font-weight: 800;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #20b99d;
+        }
+
+        .switch {
+            text-align: center;
+            margin-top: 20px;
+            color: #9db5b0;
+        }
+
+        .switch a {
+            color: #27d3b2;
+            cursor: pointer;
+        }
+
+        .error {
+            color: #ff8585;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">CF</div>
+        <div class="brand">CAMPUSFLOW AI</div>
+
+        <!-- LOGIN -->
+        <div class="box" id="loginBox">
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Sign in to your CampusFlow account</p>
+
+            <form id="loginForm">
+
+                <label>Email</label>
+                <input type="email" id="loginEmail" placeholder="you@example.com" required>
+
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+                <button type="submit">LOGIN</button>
+
+                <div id="loginError" class="error"></div>
+            </form>
+
+            <div class="switch">
+                Don't have an account?
+                <a onclick="showSignup()">Create one</a>
+            </div>
+        </div>
+
+
+        <!-- SIGN UP -->
+        <div class="box hidden" id="signupBox">
+            <h1>Create Account</h1>
+            <p class="subtitle">Join CampusFlow AI</p>
+
+            <form id="signupForm">
+
+                <label>Full Name</label>
+                <input type="text" id="signupName" placeholder="Your full name" required>
+
+                <label>Email</label>
+                <input type="email" id="signupEmail" placeholder="you@example.com" required>
+
+                <label>Password</label>
+                <input type="password" id="signupPassword" placeholder="Minimum 6 characters" minlength="6" required>
+
+                <label>Account Type</label>
+                <select id="accountType" required>
+                    <option value="">Select account type</option>
+                    <option value="student">Student</option>
+                    <option value="staff">Faculty / Staff</option>
+                </select>
+
+                <button type="submit">CREATE ACCOUNT</button>
+
+                <div id="signupError" class="error"></div>
+            </form>
+
+            <div class="switch">
+                Already have an account?
+                <a onclick="showLogin()">Login</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Firebase -->
+    <script type="module">
+
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            updateProfile
+        } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+        import {
+            getFirestore,
+            doc,
+            setDoc,
+            getDoc
+        } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+        // ==========================================
+        // REPLACE WITH YOUR FIREBASE CONFIG
+        // ==========================================
+
+        // Import the functions you need from the SDKs you need
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD3pNldStcJ2LmpfF0yPmeGAuMVMPuojQk",
+            authDomain: "campusflow-ai-96b09.firebaseapp.com",
+            projectId: "campusflow-ai-96b09",
+            storageBucket: "campusflow-ai-96b09.firebasestorage.app",
+            messagingSenderId: "253168582449",
+            appId: "1:253168582449:web:6981a06c9f106f485a3a10"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+
+        // ==========================================
+        // LOGIN
+        // ==========================================
+
+        document
+            .getElementById("loginForm")
+            .addEventListener("submit", async (e) => {
+
+                e.preventDefault();
+
+                const email =
+                    document.getElementById("loginEmail").value.trim();
+
+                const password =
+                    document.getElementById("loginPassword").value;
+
+                const error =
+                    document.getElementById("loginError");
+
+                error.textContent = "";
+
+                try {
+
+                    // Sign in with Firebase Authentication
+                    const userCredential =
+                        await signInWithEmailAndPassword(
+                            auth,
+                            email,
+                            password
+                        );
+
+                    const user = userCredential.user;
+
+                    console.log("Logged in user:", user.uid);
+
+
+                    // Get this user's Firestore profile
+                    const userDoc = await getDoc(
+                        doc(db, "users", user.uid)
+                    );
+
+
+                    if (!userDoc.exists()) {
+
+                        error.textContent =
+                            "Your account profile was not found.";
+
+                        console.error(
+                            "No Firestore profile found for:",
+                            user.uid
+                        );
+
+                        return;
+                    }
+
+
+                    const userData = userDoc.data();
+
+                    console.log("User data:", userData);
+
+
+                    // Send user to the correct portal
+                    if (userData.role === "student") {
+
+                        console.log("Redirecting to student portal...");
+
+                        window.location.href =
+                            "student/student.html";
+
+                    } else if (userData.role === "staff") {
+
+                        console.log("Redirecting to staff portal...");
+
+                        window.location.href =
+                            "staff/staff.html";
+
+                    } else {
+
+                        error.textContent =
+                            "Your account has no valid role.";
+
+                        console.error(
+                            "Invalid role:",
+                            userData.role
+                        );
+                    }
+
+                } catch (err) {
+
+                    console.error("LOGIN ERROR:", err);
+
+                    error.textContent =
+                        getFirebaseError(err.code);
+
+                }
+
+            });
+
+
+
+        // ==========================================
+        // SIGN UP
+        // ==========================================
+
+        document
+            .getElementById("signupForm")
+            .addEventListener("submit", async (e) => {
+
+                e.preventDefault();
+
+                const name =
+                    document.getElementById("signupName").value;
+
+                const email =
+                    document.getElementById("signupEmail").value;
+
+                const password =
+                    document.getElementById("signupPassword").value;
+
+                const accountType =
+                    document.getElementById("accountType").value;
+
+                const error =
+                    document.getElementById("signupError");
+
+                error.textContent = "";
+
+                try {
+
+                    // Create Firebase user
+                    const userCredential =
+                        await createUserWithEmailAndPassword(
+                            auth,
+                            email,
+                            password
+                        );
+
+                    const user = userCredential.user;
+
+
+                    // Save display name
+                    await updateProfile(user, {
+                        displayName: name
+                    });
+
+
+                    // Save user information in Firestore
+                    await setDoc(
+                        doc(db, "users", user.uid),
+                        {
+                            uid: user.uid,
+                            name: name,
+                            email: email,
+                            role: accountType,
+                            createdAt: new Date()
+                        }
+                    );
+
+
+                    // Remember account type
+                    localStorage.setItem(
+                        "campusflowAccountType",
+                        accountType
+                    );
+
+
+                    // Redirect
+                    if (accountType === "staff") {
+                        window.location.href = "staff/staff.html";
+                    } else {
+                        window.location.href = "student/student.html";
+                    }
+
+                } catch (err) {
+
+                    console.error(err);
+
+                    error.textContent =
+                        getFirebaseError(err.code);
+                }
+
+            });
+
+
+        // ==========================================
+        // FIREBASE ERROR MESSAGES
+        // ==========================================
+
+        function getFirebaseError(code) {
+
+            switch (code) {
+
+                case "auth/email-already-in-use":
+                    return "This email is already registered.";
+
+                case "auth/invalid-email":
+                    return "Please enter a valid email.";
+
+                case "auth/weak-password":
+                    return "Password must be at least 6 characters.";
+
+                case "auth/invalid-credential":
+                    return "Incorrect email or password.";
+
+                case "auth/user-not-found":
+                    return "No account found with this email.";
+
+                case "auth/wrong-password":
+                    return "Incorrect password.";
+
+                default:
+                    return "Something went wrong. Please try again.";
+            }
+        }
+
+    </script>
+
+
+    <script>
+
+        function showSignup() {
+            document
+                .getElementById("loginBox")
+                .classList.add("hidden");
+
+            document
+                .getElementById("signupBox")
+                .classList.remove("hidden");
+        }
+
+
+        function showLogin() {
+            document
+                .getElementById("signupBox")
+                .classList.add("hidden");
+
+            document
+                .getElementById("loginBox")
+                .classList.remove("hidden");
+        }
+
+    </script>
+
+</body>
+
+</html>
